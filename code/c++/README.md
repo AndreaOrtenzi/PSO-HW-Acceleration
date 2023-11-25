@@ -15,12 +15,12 @@ make
 
 ## How to execute
 
-The program can take as arguments the number of particles to use, the dimensions of the problem, the maximum number of iterations and the name of the function to minimize, in this order. These can be expanded if you need more flexibility on the parameters.
+The program can take as arguments the number of particles to use, the dimensions of the problem, the name of the function to minimize and the maximum number of iterations, in this order. These can be expanded if you need more flexibility on the parameters.
 The functions implemented for now are the sphere function centered in the origin
 ```math
-f(\mathbf{x}) = \sum_{i = 0}^d x_i^` \text{    ,}
+f(\mathbf{x}) = \sum_{i = 0}^d x_i^ \text{    ,}
 ```
-where $d$ is the number of dimension of the problem, and the [Rosenbrok function](https://en.wikipedia.org/wiki/Rosenbrock_function)
+where $d$ is the number of dimension of the problem, and the [Rosenbrock function](https://en.wikipedia.org/wiki/Rosenbrock_function)
 ```math
 f(\mathbf{x}) = \sum_{i = 0}^{d-1} [100 (x_{i+1} - x_i^2)^2 + (1-x_i)^2] \text{    .}
 ```
@@ -31,9 +31,9 @@ std::function<double(std::vector<double>)> fct = ...
 i.e., the function must take as input a C++ vector of doubles (all the the $x_i$), and return a single double ($`f(\mathbf{x})`$).
 
 ### Usage example
-Example: execute the PSO algorithm with 5000 particles, on the 10-dimensional Rosenbrok function for 1000 iterations
+Example: execute the PSO algorithm with 5000 particles, on the 10-dimensional Rosenbrock function for 1000 iterations
 ```bash
-./PSO 5000 10 rosenbrok 2000
+./PSO 5000 10 rosenbrock 2000
 ```
 
 # LITTLE SIDENOTE:

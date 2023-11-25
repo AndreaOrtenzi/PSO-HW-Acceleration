@@ -28,12 +28,13 @@ main(int argc, char **argv) {
             std::cout << "SETTING DEFAULT PARAMETERS:" << std::endl;
             std::cout << "Number of particles: " << numParticles << std::endl;
             std::cout << "Dimensions: " << dimensions << std::endl;
-            std::cout << "Max number of iterations: " << maxIterations << std::endl;
             std::cout << "Function to minimize: sphere" << std::endl;
-            std::cout << "If you want to change these, please read the correct usage below."
-                      << std::endl;
+            std::cout << "Max number of iterations: " << maxIterations << std::endl;
+            std::cout
+                << "=========> If you want to change these, please read the correct usage below."
+                << std::endl;
             std::cout << "Usage: " << argv[0]
-                      << " [numParticles] [dimensions] [maxIterations] [function]" << std::endl;
+                      << " [numParticles] [dimensions] [function] [maxIterations]" << std::endl;
         } else {
             numParticles         = std::stoi(argv[1]);
             dimensions           = std::stoi(argv[2]);
