@@ -36,11 +36,17 @@
 *.x86_64
 *.hex
 
+# Build files
+build/
+
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+
+# IDE files
+.vscode/
 
 # Kernel Module Compile Results
 *.mod*
