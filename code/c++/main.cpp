@@ -41,14 +41,20 @@ main(int argc, char **argv) {
             std::string function = argv[3];
             maxIterations        = std::stoi(argv[4]);
 
-                if (function.compare("rosenbrock")) {
+            std::cout << "PARSED PARAMETERS:" << std::endl;
+            std::cout << "Number of particles: " << numParticles << std::endl;
+            std::cout << "Dimensions: " << dimensions << std::endl;
+                if (function.compare("rosenbrock") == 0) {
                     f = rosenbrock;
-                } else if (function.compare("sphere")) {
+                    std::cout << "Function chosen: Rosenbrock function." << std::endl;
+                } else if (function.compare("sphere") == 0) {
                     f = sphere;
+                    std::cout << "Function chosen: sphere function." << std::endl;
                 } else {
                     std::cout << "Function not recognized. Using sphere function." << std::endl;
                     f = sphere;
                 }
+            std::cout << "Max number of iterations: " << maxIterations << std::endl;
         }
 
     double lowerBound = -5.0;

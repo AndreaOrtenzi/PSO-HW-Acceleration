@@ -20,10 +20,12 @@ The functions implemented for now are the sphere function centered in the origin
 ```math
 f(\mathbf{x}) = \sum_{i = 0}^d x_i^ \text{    ,}
 ```
-where $d$ is the number of dimension of the problem, and the [Rosenbrock function](https://en.wikipedia.org/wiki/Rosenbrock_function)
+where $d$ is the number of dimension of the problem, the global minimum is zero and occurs at $x_i = 0$ for all $i$, and the [Rosenbrock function](https://en.wikipedia.org/wiki/Rosenbrock_function)
 ```math
 f(\mathbf{x}) = \sum_{i = 0}^{d-1} [100 (x_{i+1} - x_i^2)^2 + (1-x_i)^2] \text{    .}
 ```
+that has a global minimum of zero in the middle of a plateau, that can be found at $x_i = 1$ for all $i$.
+
 Also the function zoo can be expanded, as long as the structure follows the following functional form:
 ```cpp
 std::function<double(std::vector<double>)> fct = ...
